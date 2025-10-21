@@ -1,0 +1,23 @@
+**/data/
+outputs/
+debug/
+**/build/
+**/cmd.sh
+experiments.sh
+experiments_range.sh
+exp_range_threads.sh
+experiments_threads.sh
+*.gz
+# SeRF/
+milvus/volumes/
+*.so
+*.o
+*.npy
+tmux*
+VBASE-artifacts/vectordb/thirdparty/SPTAG/ThirdParty/zstd_copy
+VBASE-artifacts/tmp/
+VBASE-artifacts/scripts/vbase/query_run/joins/result/
+VBASE-artifacts/scripts/vbase/query_run/joins/sql/
+VBASE-artifacts/scripts/planning/tmp/
+!VBASE-artifacts/vectordb/Postgres/src/timezone/data/
+!VBASE-artifacts/vectordb/thirdparty/SPTAG/ThirdParty/zstd/build
