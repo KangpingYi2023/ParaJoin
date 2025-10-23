@@ -2,6 +2,12 @@
 
 This repo is the implementation of ParaJoin: A Parallelism-aware Approximate Filtered Similarity Join Method in Vector Databases
 
+## Requirements
+
+- A modern C++ compiler that supports C++17
+- CMake 3.23.1 or higher
+- OpenMP, TBB, Faiss
+
 ## Quick Start
 
 ### Build
@@ -61,7 +67,6 @@ The data points should be already sorted in ascending order by the attribute.
 **`--M`**: The degree of the graph index. It should equal the 'M' used for constructing index.
 
 **`--threads`**: The number of threads for parallel join.
-
 
 #### command:
 ```bash
