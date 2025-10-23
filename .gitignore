@@ -1,4 +1,5 @@
 **/data/
+!data/SIFTsmall/siftsmall_base.bin
 outputs/
 debug/
 **/build/
@@ -8,7 +9,6 @@ experiments_range.sh
 exp_range_threads.sh
 experiments_threads.sh
 *.gz
-# SeRF/
 milvus/volumes/
 *.so
 *.o
