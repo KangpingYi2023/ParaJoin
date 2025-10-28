@@ -102,49 +102,6 @@ namespace VectorJoin
             edgefile.close();
             vectorfile.close();
             std::cout << "load index finished ..." << std::endl;
-
-            // std::string landmarkfilename = edgefilename + "_landmarks";
-            // std::ifstream landmarkfile(landmarkfilename, std::ios::in | std::ios::binary);
-            // if (!landmarkfile.is_open())
-            //     throw Exception("cannot open " + landmarkfilename);
-
-            // landmarkfile.read((char *)&centroids_nb, sizeof(size_t));
-            // landmarkfile.read((char *)&pq_D, sizeof(size_t));
-            // landmarkfile.read((char *)&pq_M, sizeof(size_t));
-            // landmarkfile.read((char *)&pq_nbits, sizeof(size_t));
-            // landmarkfile.read((char *)&pq_N, sizeof(size_t));
-
-            // // faiss::ProductQuantizer pq(pq_D, pq_M, pq_nbits);
-            // // pq_ptr = &pq;
-            // std::string pq_path = edgefilename + "_pq";
-            // // faiss::FileIOReader reader(pq_path);
-            // pq_ptr = faiss::read_ProductQuantizer(pq_path.c_str());
-            // code_size = (pq_M * pq_nbits + 1) / 8;
-
-            // candidate_entry_points.resize(centroids_nb);
-            // for (int i = 0; i < centroids_nb; i++)
-            // {
-            //     size_t M;
-            //     landmarkfile.read((char *)&M, sizeof(size_t));
-
-            //     candidate_entry_points[i].resize(M);
-            //     landmarkfile.read((char *)candidate_entry_points[i].data(), sizeof(int) * M);
-            // }
-
-            // // size_t centroids_lenth;
-            // // landmarkfile.read((char *)&centroids_lenth, sizeof(size_t));
-            // // landmarkfile.read((char *)pq_ptr->centroids.data(), centroids_lenth * sizeof(float));
-            // // pq_ptr->
-            // // all_centroids.resize(centroids_nb * pq_D);
-            // // landmarkfile.read((char *)all_centroids.data(), centroids_nb * pq_D * sizeof(float));
-
-            // // landmark_labels.resize(pq_N);
-            // // landmark_dists.resize(pq_N);
-            // // landmarkfile.read((char *)landmark_labels.data(), sizeof(int) * pq_N);
-            // // landmarkfile.read((char *)landmark_dists.data(), sizeof(float) * pq_N);
-
-            // landmarkfile.close();
-            // std::cout << "load landmark finished ..." << std::endl;
         }
 
         ~iRangeGraph_Search()
