@@ -1,8 +1,6 @@
 #include "iRG_search.h"
-// #include "iRG_search_join.h"
 #include "search_join.h"
-// #include "iRG_search_spj.h"
-// #include "iRG_simjoin.h"
+
 
 std::unordered_map<std::string, std::string> paths;
 std::unordered_map<std::string, float> radius_dict = {
@@ -103,12 +101,10 @@ int main(int argc, char **argv)
     generator.GenerateJoinGroundtruth(paths["groundtruth_saveprefix"], join_storage, paths["join_type"], dis_threshold);
     join_storage.LoadGroundtruth(paths["groundtruth_saveprefix"]);
 
-    // std::cout << "Join groundturth test finished!" << std::endl;
-
     VectorJoin::iRangeGraph_Search<float> index1(paths["data_vector1"], paths["index1"], join_storage.storage1, M);
     VectorJoin::iRangeGraph_Search<float> index2(paths["data_vector2"], paths["index2"], join_storage.storage2, M);
 
-    // // searchefs can be adjusted
+    // searchefs can be adjusted
     std::vector<int> SearchEF = {1000, 750, 500, 300, 150, 100, 75, 50, 45, 40, 30, 20, 10};
     // std::vector<int> SearchEF = {500};
     std::vector<int> SearchEF_simjoin = {20, 10};
